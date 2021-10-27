@@ -1,0 +1,55 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="form-container">
+
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <h2>Register</h2>
+        <div class="inputBox mb-3">
+            <i class="fal fa-user"></i>
+            <input asp-for="Name" class="form-control" placeholder="Your Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="inputBox mb-3">
+            <i class="fal fa-user"></i>
+            <input asp-for="Surname" class="form-control" placeholder="Your Surname">
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+        <div class="inputBox mb-3">
+            <i class="fal fa-user"></i>
+            <input asp-for="Username" class="form-control" placeholder="Your Username">
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+        <div class="inputBox mb-3">
+            <i class="fal fa-envelope"></i>
+            <input asp-for="Email" class="form-control" placeholder="Your Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="inputBox mb-3">
+            <i class="fal fa-lock"></i>
+            <input asp-for="Password" class="form-control" placeholder="Your Password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="inputBox mb-3">
+            <i class="fal fa-lock"></i>
+            <input asp-for="CheckPassword" class="form-control" placeholder="Repeat Your Password">
+            <span asp-validation-for="CheckPassword" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <div class="form-img">
+
+        <img src="~/assets/img/sign-up.png" alt="">
+        <p><a asp-controller="Home" asp-action="Login"> I have an account</a></p>
+    </div>
+
+
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,35 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="form-container">
+    <div class="form-img">
+
+        <img src="~/assets/img/sign-in.jpg" alt="">
+        <p><a asp-controller="Home" asp-action="Register"> Create an account</a></p>
+    </div>
+    <form method="post">
+        <h2>Sign In</h2>
+        <div class="inputBox mb-3">
+            <i class="fal fa-user"></i>
+            <input asp-for="Email" class="form-control" placeholder="Your Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="inputBox mb-3">
+            <i class="fal fa-lock"></i>
+            <input asp-for="Password" class="form-control" placeholder="Your Password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1" style="color: #EA888D;">Remember me </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+
+
+</div>
