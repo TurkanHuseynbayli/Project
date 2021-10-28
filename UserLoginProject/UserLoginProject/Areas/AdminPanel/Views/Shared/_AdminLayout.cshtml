@@ -16,17 +16,17 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="~/admin/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="~/admin/images/logo.png" />
+  
     @RenderSection("Css", false)
 </head>
 <body>
     <div class="container-scroller">
-        <!-- partial:partials/_navbar.html -->
+
+        <!-- Nav Start-->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
                 <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                    <a class="navbar-brand brand-logo" href="/Home/Index"><img src="~/admin/images/logo.png" alt="logo" /></a>
-                    <a class="navbar-brand brand-logo-mini" href="/Home/Index"><img src="~/admin/images/logo-mini.svg" alt="logo" /></a>
+                    <a class="navbar-brand brand-logo-mini" href="/Home/Login"><img src="~/admin/images/logo-mini.svg" alt="logo" /></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                         <span class="mdi mdi-sort-variant"></span>
                     </button>
@@ -46,7 +46,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
-                 
+
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <img src="~/admin/images/faces/face10.jpg" alt="profile" />
@@ -66,9 +66,9 @@
                 </button>
             </div>
         </nav>
-        <!-- partial -->
+
         <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_sidebar.html -->
+
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
@@ -85,34 +85,34 @@
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                               
+
                                 <li class="nav-item"><a class="nav-link" asp-area="AdminPanel" asp-controller="User" asp-action="Index"> User </a></li>
-                               
+
                             </ul>
                         </div>
                     </li>
 
-                  
+
                 </ul>
             </nav>
-            <!-- partial -->
+
             <div class="main-panel">
                 <div class="content-wrapper">
                     @RenderBody()
                 </div>
-                <!-- content-wrapper ends -->
-                <!-- partial:partials/_footer.html -->
+
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Code Academy © 2021 </span>
                         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
                     </div>
                 </footer>
-                <!-- partial -->
+
             </div>
-            <!-- main-panel ends -->
+
         </div>
         <!-- page-body-wrapper ends -->
+        <!-- Nav End-->
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->

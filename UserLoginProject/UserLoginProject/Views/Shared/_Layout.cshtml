@@ -35,28 +35,11 @@
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                <img src="~/assets/img/logo.png" />
-            </a>
-
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+           
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="        margin-left: 1149px
+">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Home" asp-action="Index">HOME</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Product" asp-action="Index">PRODUCT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Blog" asp-action="Index">BLOG</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="About" asp-action="Index">ABOUT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Contact" asp-action="Index">CONTACT</a>
-                    </li>
+                   
                     @if (!User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item">
@@ -71,17 +54,7 @@
                         <li class="nav-item"><a class="nav-link" asp-area="AdminPanel" asp-controller="Dashboard" asp-action="Index">@User.Identity.Name</a></li>
                         <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Logout">Logout</a></li>
                     }
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Favorite" asp-action="Index">
-                            <i class="far fa-heart"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Basket" asp-action="Index">
-                            <i class="fas fa-shopping-cart"></i>
 
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -91,6 +64,7 @@
 
     @RenderBody()
     @RenderSection("Scripts", false)
+    <script src="~/assets/js/main.js"></script>
 </body>
 
 </html>
